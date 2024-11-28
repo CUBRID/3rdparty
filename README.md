@@ -10,3 +10,8 @@ The original URL for downloads of each library is as follow:
 6. LIBOPENSSL: https://www.openssl.org/source/old/1.1.1/openssl-1.1.1f.tar.gz
 7. LIBUNIXODBC: https://ftp.osuosl.org/pub/blfs/conglomeration/unixODBC/unixODBC-2.3.9.tar.gz
 8. LIBTBB: https://github.com/oneapi-src/oneTBB/archive/refs/tags/v2021.11.0.tar.gz
+
+For CI:
+1. indent: https://ftp.gnu.org/gnu/indent/indent-2.2.11.tar.gz
+2. code style: https://github.com/google/google-java-format/releases/download/google-java-format-1.7/google-java-format-1.7-all-deps.jar
+3. cpp check: https://github.com/danmar/cppcheck/archive/2.4.1.tar.gz
