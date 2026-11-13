@@ -22,6 +22,11 @@ For CI (.github/workflows/check.yml)
 2. code style: https://github.com/google/google-java-format/releases/download/google-java-format-1.7/google-java-format-1.7-all-deps.jar
 3. cpp check: https://github.com/danmar/cppcheck/archive/2.13.0.tar.gz
 
+For JDBC test build (cubrid-jdbc build.xml)
+===========================================
+1. JUnit: https://repo1.maven.org/maven2/junit/junit/4.13.2/junit-4.13.2.jar
+2. Hamcrest (required by JUnit 4): https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+
 Guidlines to upgrade a package
 ==============================
 1. Download new version package using wget or appropriate commands
@@ -42,5 +47,11 @@ Guidlines to upgrade a package
    * google-java-format: google-java-format/	# $ mv google-java-format-1.7-all-deps.jar google-java-format/
    * cppcheck: cppcheck/			# $ mv 2.13.0.tar.gz cppcheck/
    * indent-2.2.11.tar.gz: indent/		# $ mv indent-2.2.11.tar.gz indent/
+cubrid-jdbc build.xml:
+   * junit: junit/				# $ mv junit-4.13.2.jar junit/
+   * hamcrest-core: junit/			# $ mv hamcrest-core-1.3.jar junit/
 
-3. Change URL for 3rdparty/CMakeLists.txt or .github/workflows/check.yml respectively
+3. Change URL for 3rdparty/CMakeLists.txt, .github/workflows/check.yml or cubrid-jdbc build.xml respectively
+   (cubrid-jdbc build.xml also pins the SHA-256 of each jar; update it together)
+4. Do not overwrite or delete an existing file: older branches still download it by its URL
+   (and cubrid-jdbc build.xml checks its SHA-256). Add the new version as a new file.
