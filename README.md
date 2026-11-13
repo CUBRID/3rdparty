@@ -53,3 +53,5 @@ cubrid-jdbc build.xml:
 
 3. Change URL for 3rdparty/CMakeLists.txt, .github/workflows/check.yml or cubrid-jdbc build.xml respectively
    (cubrid-jdbc build.xml also pins the SHA-256 of each jar; update it together)
+4. Do not overwrite or delete an existing file: older branches still download it by its URL
+   (and cubrid-jdbc build.xml checks its SHA-256). Add the new version as a new file.
